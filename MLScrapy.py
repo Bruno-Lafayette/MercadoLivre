@@ -54,7 +54,7 @@ def appendList(productName, productURL, price, seller, sellerURL):
 
 def nextPage(soap):
     page = soap.find('li',{'class': 'andes-pagination__button andes-pagination__button--next'})
-    print(page)
+    print("----- PRÓXIMA PÁGINA -----")
     if page is not None:
         url = page.find('a')['href']
         return True, url
